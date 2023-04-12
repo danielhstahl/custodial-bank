@@ -13,7 +13,8 @@ provider "aws" {
 }
 
 resource "aws_qldb_ledger" "transactions-ledger" {
-  name             = "transactions-ledger"
-  permissions_mode = "STANDARD"
+  name                = "transactions-ledger"
+  permissions_mode    = "STANDARD"
+  deletion_protection = false
 }
 
